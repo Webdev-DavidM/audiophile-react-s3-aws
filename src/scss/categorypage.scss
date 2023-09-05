@@ -1,0 +1,123 @@
+@import '../App.scss';
+
+.category {
+  &__hero {
+    background-color: $black;
+    height: 200px;
+    position: relative;
+  }
+
+  &__hero-title {
+    color: $white;
+    position: absolute;
+    width: 100%;
+
+    text-align: center;
+    bottom: 20px;
+  }
+
+  &__product {
+    &:nth-child(even) {
+      div:nth-child(2) {
+        order: 0;
+      }
+
+      div:nth-child(1) {
+        order: 1;
+      }
+    }
+
+    margin: 2rem;
+    text-align: center;
+
+    @include tablet {
+      margin: 3rem;
+    }
+
+    @include desktop {
+      display: flex;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+  }
+
+  &__copy-container {
+    @include desktop {
+      padding: 8rem 4rem 4rem 4rem;
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      justify-content: center;
+      width: 50%;
+      text-align: left;
+    }
+  }
+
+  &__new-product {
+    color: $dark-orange;
+    margin: 1rem 0;
+  }
+
+  &__image-container {
+    width: 100%;
+    height: auto;
+    margin: 8rem 0 3rem;
+
+    &:first-child {
+      margin-top: 0;
+
+      @include desktop {
+        margin-top: 4rem;
+      }
+    }
+
+    @include tablet {
+      width: 75%;
+      margin: 8rem auto 3rem;
+    }
+
+    @include desktop {
+      width: 50%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+    @include desktop {
+      width: 80%;
+    }
+  }
+
+  &__copy {
+    color: $darker-grey;
+    margin: 2rem 0 1rem;
+
+    @include tablet {
+      width: 80%;
+      margin: 2rem auto;
+    }
+
+    @include desktop {
+      width: 100%;
+      margin: 2rem 0 0 0;
+    }
+  }
+
+  &__product-cta {
+    @include block-button-orange;
+    width: 10rem;
+    margin: 2rem auto 8rem auto;
+
+    @include tablet {
+      margin: 2rem auto;
+    }
+
+    @include desktop {
+      margin: 2rem 0;
+    }
+  }
+}

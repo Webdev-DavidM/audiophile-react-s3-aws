@@ -1,0 +1,164 @@
+@import '../App.scss';
+
+.footer {
+  background-color: $black;
+  position: relative;
+  display: flex;
+  padding: 3rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    padding: 2rem 3rem;
+  }
+
+  @include large-desktop {
+    padding: 2rem 6rem;
+  }
+
+  @include very-large-desktop {
+    padding: 2rem 9rem;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50%;
+    top: 0;
+    left: 25%;
+    z-index: 100;
+    border-top: 8px solid $dark-orange;
+
+    @include tablet {
+      width: 15%;
+      left: 10%;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    text-align: center;
+
+    @include desktop {
+      width: 40%;
+      text-align: left;
+    }
+  }
+
+  &__nav-links {
+    width: auto;
+    margin: 2rem auto;
+    color: $white;
+    text-align: center;
+
+    @include tablet {
+      width: 100%;
+      display: flex;
+      text-align: left;
+    }
+
+    @include desktop {
+      width: 60%;
+      text-align: right;
+    }
+  }
+
+  &__link {
+    @include fonts(18px, 24px, 1.3px, 400);
+    color: $white;
+    display: block;
+    padding: 0.5rem;
+    transition: color 0.4s ease-in-out;
+    position: relative;
+
+    @include tablet {
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    @include desktop {
+      &:first-child {
+        margin-left: auto;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 88%;
+      left: -2px;
+      border-bottom: 1px solid $dark-orange;
+      width: 100%;
+      margin-top: 5px;
+      transform: scaleX(0);
+      transition: all 0.3s cubic-bezier(0.55, 0, 0, 1);
+    }
+
+    &:hover {
+      color: $dark-orange;
+      cursor: pointer;
+
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &__copy {
+    color: $darker-grey;
+    text-align: center;
+    margin: 0 auto 2rem;
+    width: 80%;
+
+    @include tablet {
+      width: 100%;
+      text-align: left;
+
+      &--half-width {
+        width: 50%;
+        margin: 0;
+      }
+    }
+
+    @include desktop {
+      width: 60%;
+      margin: 0 0 2rem 0;
+
+      &--half-width {
+        width: 50%;
+        margin: 0;
+      }
+    }
+  }
+
+  &__social-media {
+    @include desktop {
+      width: 48%;
+      text-align: right;
+      margin-top: -100px;
+    }
+  }
+
+  &__social-svg {
+    margin: 0 1rem;
+
+    &:hover {
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      path {
+        fill: $dark-orange;
+      }
+    }
+  }
+}

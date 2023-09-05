@@ -1,0 +1,121 @@
+@mixin fonts($size, $line, $spacing, $weight) {
+  font-size: $size;
+  line-height: $line;
+  letter-spacing: $spacing;
+  font-weight: $weight;
+  font-family: $font-family;
+}
+
+/* Re-usable buttons */
+
+@mixin arrow-button() {
+  text-transform: uppercase;
+  @include fonts(15px, 25px, 0px, 400);
+  width: auto;
+  color: darken($light-grey, 50%);
+  cursor: pointer;
+  padding: 0.5rem;
+  height: 2.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+
+  img {
+    position: absolute;
+    left: 95%;
+    top: 36%;
+    transition: left 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: $dark-orange;
+    img {
+      left: 100%;
+    }
+  }
+}
+
+@mixin block-button-orange() {
+  text-transform: uppercase;
+  @include fonts(15px, 25px, 0px, 400);
+  width: auto;
+  color: $white;
+  cursor: pointer;
+  background-color: $dark-orange;
+  padding: 0.5rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    background-color: $light-orange;
+  }
+}
+
+@mixin block-button-black() {
+  text-transform: uppercase;
+  @include fonts(15px, 25px, 0px, 400);
+  width: auto;
+  color: $white;
+  cursor: pointer;
+  background-color: $black;
+  padding: 0.5rem;
+  height: 2.5rem;
+  display: flex;
+  border: 2px solid $black;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
+}
+
+@mixin block-button-black-outline() {
+  text-transform: uppercase;
+  @include fonts(15px, 25px, 0px, 400);
+  width: 10rem;
+  color: $black;
+  cursor: pointer;
+  padding: 0.5rem;
+  height: 2.5rem;
+  display: flex;
+  border: 2px solid $black;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
+}
+
+/* Responsive media query mixins */
+
+@mixin tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media screen and (min-width: $large-desktop) {
+    @content;
+  }
+}
+
+@mixin very-large-desktop {
+  @media screen and (min-width: $very-large-desktop) {
+    @content;
+  }
+}

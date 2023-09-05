@@ -1,0 +1,79 @@
+/* Global css resets for elements so I can style them */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $black;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 18px;
+  background-color: $white;
+  font-family: $font-family;
+  font-weight: 400;
+  margin: auto;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-family: $font-family;
+  @include fonts(20px, 22px, 2px, 400);
+}
+
+h1 {
+  @include fonts(56px, 58px, 2px, 400);
+}
+h2 {
+  @include fonts(40px, 44px, 1.5px, 400);
+}
+h3 {
+  @include fonts(32px, 36px, 1.15px, 400);
+}
+h4 {
+  @include fonts(24px, 33px, 1.7px, 400);
+}
+h5 {
+  @include fonts(24px, 33px, 1.7px, 400);
+}
+h6 {
+  @include fonts(18px, 24px, 1.3px, 400);
+}
+
+p {
+  @include fonts(15px, 25px, 0px, 400);
+}
+
+// These are global classes which can be used by any component are not part of BEM
+
+.title {
+  @include fonts(18px, 24px, 1.3px, 400);
+}
+
+.sub-title {
+  @include fonts(13px, 25px, 1px, 400);
+}
+
+.overline {
+  text-transform: uppercase;
+  @include fonts(14px, 19px, 10px, 400);
+}

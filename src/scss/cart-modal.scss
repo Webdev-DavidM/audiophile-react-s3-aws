@@ -1,0 +1,106 @@
+@import '../App.scss';
+
+.cart-modal {
+  position: fixed;
+  height: 100vh;
+  z-index: 100000;
+  width: 100vw;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--navbar-not-covered {
+    top: 60px;
+
+    @include desktop {
+      top: 100px;
+    }
+  }
+  &__container {
+    height: auto;
+    height: auto;
+    max-height: 800px;
+    max-width: 400px;
+    background-color: $white;
+    z-index: 100001;
+    width: calc(100% - 2rem);
+    margin: auto;
+    padding: 2rem;
+    border-radius: 10px;
+
+    @include tablet {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+    }
+
+    @include desktop {
+      top: 40px;
+      right: 60px;
+    }
+
+    @include large-desktop {
+      top: 60px;
+      right: 80px;
+    }
+  }
+
+  &__copy-grey {
+    color: $darker-grey;
+  }
+
+  &__quantity {
+    margin-left: auto;
+  }
+
+  &__header-and-remove-all-section {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__remove-btn {
+    color: $darker-grey;
+    text-decoration: underline;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  &__image {
+    border-radius: 10px;
+    width: 4.5rem;
+  }
+
+  &__item-details {
+    margin-left: 0.5rem;
+
+    @include tablet {
+      margin-left: 1rem;
+    }
+  }
+
+  &__total-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  &__error-message {
+    margin-top: 2rem;
+    color: $warning-red;
+  }
+
+  &__checkout-btn {
+    @include block-button-orange;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,64 @@
+@import "../App.scss";
+
+.category-summary {
+  padding: 0 3rem 3rem 3rem;
+  width: 100%;
+  max-width: 1200px;
+
+  @include desktop {
+    margin: auto;
+  }
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    margin: 100px 0 0 0;
+    background-color: $light-grey;
+    border-radius: 8px;
+    height: 200px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &:first-child {
+      margin-top: 60px;
+    }
+
+    @include tablet {
+      width: 30%;
+
+      &:first-child {
+        margin-top: 100px;
+      }
+    }
+  }
+
+  &__category-name {
+    margin-top: auto;
+  }
+
+  &__cta-text {
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $dark-orange;
+    }
+  }
+
+  &__image {
+    height: auto;
+    width: 150px;
+    position: absolute;
+    top: -40px;
+    left: calc(50% - 70px);
+  }
+
+  &__cta {
+    @include arrow-button;
+  }
+}

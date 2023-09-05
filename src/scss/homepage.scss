@@ -1,0 +1,270 @@
+@import "../App.scss";
+
+.homepage {
+  width: 100vw;
+
+  &__section {
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  &__hero {
+    width: 100%;
+    height: auto;
+  }
+
+  &__hero-image {
+    margin-top: -100px;
+
+    @include tablet {
+      margin-top: -200px;
+    }
+
+    @include desktop {
+      margin-top: 0px;
+    }
+
+    @include large-desktop {
+      margin-top: -20px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__hero-copy-section {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include tablet {
+      top: 30%;
+    }
+
+    @include desktop {
+      width: 40%;
+      text-align: left;
+      top: 12%;
+    }
+
+    @include large-desktop {
+      width: 40%;
+      text-align: left;
+      top: 16%;
+    }
+
+    @include very-large-desktop {
+      width: 40%;
+      text-align: left;
+      top: 22%;
+    }
+  }
+
+  &__hero-title {
+    color: $darker-grey;
+  }
+
+  &__hero-subtitle {
+    margin: 2rem 0;
+    color: $white;
+  }
+
+  &__hero-copy {
+    color: $darker-grey;
+  }
+
+  &__hero-cta {
+    @include block-button-orange;
+    width: 10rem;
+    margin: 2rem auto;
+
+    @include desktop {
+      margin: 2rem 0;
+    }
+  }
+
+  &__product-highlight {
+    background-color: $dark-orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+
+    @include tablet {
+      margin: 3rem;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      height: 500px;
+      overflow-y: hidden;
+    }
+  }
+
+  &__product-highlight-image-container {
+    width: 300px;
+    height: auto;
+    margin: auto;
+
+    @include desktop {
+      margin-top: 85px;
+      width: 600px;
+    }
+  }
+
+  &__product-highlight-image {
+    width: 100%;
+  }
+
+  &__product-highlight-copy-section {
+    text-align: center;
+    width: 80%;
+    margin-top: -40px;
+
+    @include desktop {
+      margin-top: 0;
+      text-align: left;
+      width: 50%;
+    }
+  }
+
+  &__product-highlight-copy {
+    color: $light-grey;
+    margin-bottom: 2rem;
+
+    @include desktop {
+      width: 60%;
+    }
+  }
+
+  &__product-hughlight-subtitle {
+    color: $lighest-grey;
+    margin-bottom: 2rem;
+  }
+
+  &__product-highlight-cta {
+    @include block-button-black;
+    width: 10rem;
+    margin: auto;
+
+    @include desktop {
+      margin: 0;
+    }
+  }
+
+  &__alternating-category-one {
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 2rem;
+    background: url("https://audiophile-images-davidm.s3.eu-west-2.amazonaws.com/home/mobile/image-speaker-zx7.jpg")
+      no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 500px;
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+      background: url("https://audiophile-images-davidm.s3.eu-west-2.amazonaws.com/home/tablet/image-speaker-zx7.jpg")
+        no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 450px;
+      margin: 3rem;
+      padding: 2rem 5rem;
+    }
+
+    @include desktop {
+      background: url("https://audiophile-images-davidm.s3.eu-west-2.amazonaws.com/home/desktop/image-speaker-zx7.jpg")
+        no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 450px;
+      margin: 3rem;
+      padding: 2rem 10rem;
+    }
+
+    @include large-desktop {
+      padding: 2rem 15rem;
+    }
+
+    @include very-large-desktop {
+      padding: 2rem 20rem;
+    }
+  }
+
+  &__alternating-category-title {
+    margin: 2rem 0;
+  }
+
+  &__alternating-category-cta {
+    @include block-button-black-outline;
+    margin: 2rem 0;
+  }
+
+  &__alternating-category-two {
+    border-radius: 10px;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 3rem;
+    }
+  }
+
+  &__alternating-category-copy-container {
+    margin: 2rem;
+    order: 1;
+    height: 250px;
+    background-color: $light-grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+    @include tablet {
+      width: 49%;
+      margin: 0;
+      height: 500px;
+    }
+  }
+
+  &__alternating-category-two-image {
+    background: url("https://audiophile-images-davidm.s3.eu-west-2.amazonaws.com/home/mobile/image-earphones-yx1.jpg")
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    border-radius: 10px;
+    margin: 2rem;
+    order: 0;
+
+    @include tablet {
+      background: url("https://audiophile-images-davidm.s3.eu-west-2.amazonaws.com/home/tablet/image-earphones-yx1.jpg")
+        no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 49%;
+      margin: 0;
+      height: 500px;
+    }
+
+    @include desktop {
+      background: url("https://audiophile-images-davidm.s3.eu-west-2.amazonaws.com/home/desktop/image-earphones-yx1.jpg")
+        no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}

@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Ecommerce audio shop app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This full stack website was my first experience of using the react testing library, typescript and graphql. The backend is hosted on heroku and the front end is hosted on a separate heroku express application to make sure react router works.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- A user can navigate the site
+- They can add products to the cart, if the user tries to add more than in stock a warning message is shown
+- The user can log in and sign up
+- The user can only checkout if they are signed in
+- Local storage saves their cart
+- Responsive website- changes layout on mobile, tablet and desktop
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Screenshot
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![](/screenshot.png)
 
-### `npm test`
+## Live site
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+http://audio-first-react-express.herokuapp.com
 
-### `npm run build`
+## My process
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Built with
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React and React hooks
+- Formik is used to create the sign up, log in and checkout details. Formik handles the validation
+- SASS using BEM 
+- React transition group is used to create exiting transitions as forms enter and leave the page
+- Mobile-first workflow- the application layout changes for mobile, tablet and desktop views, on mobile there is a downdown menu.
+- Developed from Sketch design prototypes
+- React testing library used for the front end
+- GraphQL
+- Typescript
+- Express
+- MongoDB
+- React slick slider used for carousel on the product page
+- Material UI for loading spinner
+- Local storage used to persist the cart if the user refreshes or returns to the page
+- React router
+- Heroku deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Still to do
 
-### `npm run eject`
+Integrate a payment system such as stripe or paypal
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# To run locally
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run this project please download and from the terminal
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- type npm i to load the dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- npm start to view the project.

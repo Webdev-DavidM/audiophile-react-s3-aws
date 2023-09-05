@@ -1,0 +1,62 @@
+@import '../App.scss';
+
+.bottom-copy-section {
+  margin-top: 80px;
+  margin: 2rem auto;
+
+  @include tablet {
+    margin: 6rem auto;
+  }
+
+  @include desktop {
+    display: flex;
+    height: 500px;
+    max-width: 1200px;
+  }
+
+  &__image {
+    background: url('../../public//assets/shared/mobile/image-best-gear.jpg')
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+
+    @include tablet {
+      background: url('../../public/assets/shared/tablet/image-best-gear.jpg')
+        no-repeat;
+      background-position: right;
+    }
+
+    @include desktop {
+      border-radius: 10px;
+      background: url('../../public/assets/shared/mobile/image-best-gear.jpg')
+        no-repeat;
+      order: 1;
+      width: 45%;
+    }
+  }
+
+  &__copy-section {
+    text-align: center;
+    padding: 2rem;
+
+    @include tablet {
+      padding: 3rem;
+    }
+
+    @include desktop {
+      order: 0;
+      width: 49%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      padding: 6rem;
+    }
+  }
+
+  &__copy {
+    margin: 2rem 0;
+    color: $darker-grey;
+  }
+}

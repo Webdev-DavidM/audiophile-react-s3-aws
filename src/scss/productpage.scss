@@ -1,0 +1,310 @@
+@import '../App.scss';
+
+.product {
+  margin-top: 100px;
+  margin: 100px 2rem 2rem;
+  max-width: 1200px;
+
+  &__not-found {
+    text-align:center;
+    font-size: 25px;
+    color: $warning-red
+  }
+
+  @include tablet {
+    margin: 150px auto 2rem;
+    padding: 0 3rem 0;
+  }
+
+  &__go-back-btn {
+    color: $darker-grey;
+    margin: 2rem 0 0 0;
+    width: 100%;
+    transition: 0.3s color ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      color: $dark-orange
+    }
+  }
+
+  &__title {
+    &--half-width {
+      margin-bottom: 1rem;
+      width: 50%;
+      @include desktop {
+        width: 100%;
+      }
+    }
+
+    &--margin-top-and-bottom {
+      margin: 1rem;
+      text-align: center;
+    }
+
+    &--center {
+      text-align: center;
+      margin: 1rem 0;
+    }
+  }
+
+  &__product-details {
+    @include tablet {
+      display: flex;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+  }
+
+  &__copy-container {
+    @include tablet {
+      width: 75%;
+    }
+    @include desktop {
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      text-align: left;
+    }
+  }
+
+  &__new-product {
+    color: $dark-orange;
+    margin: 1rem 0;
+  }
+
+  &__image-container {
+    width: 100%;
+    height: auto;
+    margin: 3rem 0;
+
+    @include tablet {
+      height: 100%;
+    }
+
+    @include desktop {
+      margin-top: 4rem;
+    }
+
+    @include desktop {
+      width: 50%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+    @include tablet {
+      width: 80%;
+    }
+
+    @include desktop {
+      width: 100%;
+    }
+  }
+
+  &__copy {
+    color: $darker-grey;
+    margin: 2rem 0 1rem;
+
+    @include tablet {
+      margin: 2rem 0;
+
+      &--no-margin-top {
+        margin: 0.5rem 0;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
+    @include desktop {
+      width: 100%;
+      margin: 2rem 0 0 0;
+    }
+
+    &--no-margin-top {
+      margin: 1rem 0;
+      &:first-child {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &__price {
+    margin: 2rem 0 0 0;
+  }
+
+  &__buttons-section {
+    margin-top: 2rem;
+    display: flex;
+
+    &--cart-modal {
+      margin-top: 0;
+      margin-left: auto;
+    }
+  }
+
+  &__amount-button-section {
+    background-color: $light-grey;
+    padding: 0.5rem;
+    height: 3rem;
+    margin-right: 1rem;
+    border: 1px solid $darker-grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &--cart-modal {
+      margin-right: 0;
+      margin-left: auto;
+      height: 2.5rem;
+      border: none;
+    }
+  }
+
+  &__minus-button,
+  &__plus-button {
+    padding: 1rem;
+    color: $darker-grey;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      color: $dark-orange;
+    }
+  }
+
+  &__amount {
+    padding: 1rem;
+  }
+
+  &__product-cta {
+    @include block-button-orange;
+    width: 10rem;
+
+    &--margin-top-and-bottom {
+      margin: 2rem auto;
+    }
+  }
+
+  &__features-and-in-the-box-container {
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &__features-section {
+    margin: 4rem 0;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include desktop {
+      width: 60%;
+      margin: 0;
+    }
+  }
+
+  &__in-the-box-section {
+    @include tablet {
+      display: flex;
+    }
+
+    @include desktop {
+      width: 50%;
+      flex-direction: column;
+      margin-left: 20%;
+    }
+  }
+
+  &__item-quantity {
+    margin-right: 1rem;
+    color: $dark-orange;
+  }
+
+  &__image-gallery-section {
+    margin: 8rem auto;
+    max-width: 1200px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 500px;
+    }
+  }
+
+  &__gallery-image-container {
+    margin: 1rem auto;
+    border-radius: 10px;
+
+    &:first-child {
+      margin-bottom: 1.4rem;
+    }
+
+    @include tablet {
+      display: flex;
+      // justify-content: center;
+      width: 40%;
+      margin: 0;
+      height: calc(50% - 0.7rem);
+      overflow: hidden;
+    }
+
+    &--larger-image {
+      @include tablet {
+        width: 55%;
+        height: 100%;
+        display: flex;
+        margin-left: auto;
+      }
+
+      @include large-desktop {
+        width: auto;
+        height: 120%;
+      }
+    }
+  }
+
+  &__gallery-image {
+    width: 100%;
+
+    @include tablet {
+      width: auto;
+    }
+  }
+
+  &__carousel {
+    margin-bottom: 4rem;
+  }
+
+  &__carousel-image-container {
+    width: 100%;
+  }
+
+  &__carousel-image {
+    width: 80%;
+    margin: auto;
+  }
+
+  &__warning {
+    color: $warning-red;
+    margin-top: 0.5rem;
+    height: 1rem;
+    font-size: 16px;
+  }
+
+  &__added-to-cart {
+    color: $dark-orange;
+    margin-top: 0.5rem;
+    height: 1rem;
+    font-size: 16px;
+  }
+}
