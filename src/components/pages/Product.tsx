@@ -27,7 +27,8 @@ export default function Product() {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://9dzlvevp22.execute-api.eu-west-2.amazonaws.com/dev/products/product/${paramsProduct?.slug}`,
+        
+        `https://bxg98szdc8.execute-api.eu-west-2.amazonaws.com/dev/products/product/${paramsProduct?.slug}`,
         {
           headers: {
             "Content-Type": "application/json",

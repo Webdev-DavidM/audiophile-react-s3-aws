@@ -4,7 +4,7 @@ export const getCategoriesFromAPI = async () => {
   let categoryNames = [];
   let categoriesToDisplay = [];
   let result = await axios({
-    url: "https://9dzlvevp22.execute-api.eu-west-2.amazonaws.com/dev/products/all",
+    url: "https://bxg98szdc8.execute-api.eu-west-2.amazonaws.com/dev/products/all",
     method: "GET",
     headers: {
       "Content-Type": "application/json",

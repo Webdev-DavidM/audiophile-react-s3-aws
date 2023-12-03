@@ -16,7 +16,7 @@ const Category = () => {
   const categoryProducts = async () => {
     try {
       const response = await axios.get(
-        `https://9dzlvevp22.execute-api.eu-west-2.amazonaws.com/dev/products/category/${cat.category}`,
+        `https://bxg98szdc8.execute-api.eu-west-2.amazonaws.com/dev/products/category/${cat.category}`,
         {
           headers: {
             "Content-Type": "application/json",
